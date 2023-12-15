@@ -1,4 +1,4 @@
-\ProvidesPackage{beamerthemeI6pd2}  % this style was created by Thomas Deselaers an Philippe Dreuw
+\ProvidesPackage{beamerthemetwh}  % this style was created by Thomas Deselaers an Philippe Dreuw
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{tangocolors}
@@ -6,18 +6,73 @@
 \mode<presentation>
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Colors scheme,
+% Headline
+\def\@headlinecolor{black}
+\newcommand{\setheadlinecolor}[1]{\def\@headlinecolor{#1}}
 
-\setbeamercolor{headline}{fg=tabutter,bg=black}
-\setbeamercolor{footline}{fg=tabutter, bg=ta3gray}
+% Footline
+\def\@footlinecolor{ta3gray}
+\newcommand{\setfootlinecolor}[1]{\def\@footlinecolor{#1}}
+
+% Separationline
+\def\@seplinecolor{ta2orange}
+\newcommand{\setseplinecolor}[1]{\def\@seplinecolor{#1}}
+
+% Title in Headline
+\def\@titleheadlinecolor{tabutter}
+\newcommand{\settitleheadlinecolor}[1]{\def\@titleheadlinecolor{#1}}
+
+% Author in Headline
+\def\@authorheadlinecolor{ta2orange}
+\newcommand{\setauthorheadlinecolor}[1]{\def\@authorheadlinecolor{#1}}
+
+% Institute in Headline
+\def\@instituteheadlinecolor{ta2orange}
+\newcommand{\setinstituteheadlinecolor}[1]{\def\@instituteheadlinecolor{#1}}
+
+% Frame subtitle
+\def\@framesubbgcolor{ta2orange}
+\newcommand{\setframesubbgcolor}[1]{\def\@framesubbgcolor{#1}}
+
+\def\@framesubfgcolor{black}
+\newcommand{\setframesubfgcolor}[1]{\def\@framesubfgcolor{#1}}
+
+
+% Author in head/foot
+
+\def\@authorhffgcolor{ta2orange}
+\newcommand{\setauthorhffgcolor}[1]{\def\@authorhffgcolor{#1}}
+
+\def\@authorhfbgcolor{black}
+\newcommand{\setauthorhfbgcolor}[1]{\def\@authorhfbgcolor{#1}}
+
+
+
+% Title in head/food
+
+\def\@titlehffgcolor{ta2orange}
+\newcommand{\settitlehffgcolor}[1]{\def\@titlehffgcolor{#1}}
+
+\def\@titlehfbgcolor{black}
+\newcommand{\settitlehfbgcolor}[1]{\def\@titlehfbgcolor{#1}}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setbeamercolor{headline}{fg=tabutter,bg=\@headlinecolor}
+\setbeamercolor{footline}{fg=tabutter, bg=\@headlinecolor}
 \setbeamerfont{footline}{size=\large,series=\tt}
-\setbeamercolor{separation line}{bg=ta2orange}
-\setbeamercolor{title in headline}{fg=tabutter}
-\setbeamercolor{author in headline}{fg=ta2orange}
-\setbeamercolor{institute in headline}{fg=ta3orange}
+\setbeamercolor{separation line}{bg=\@seplinecolor}
+\setbeamercolor{title in headline}{fg=\@titleheadlinecolor}
+\setbeamercolor{author in headline}{fg=\@authorheadlinecolor}
+\setbeamercolor{institute in headline}{fg=\@instituteheadlinecolor}
 
-\setbeamercolor{framesubtitle}{fg=ta3orange, bg=ta2gray}
-\setbeamercolor{author in head/foot}{fg=ta2orange, bg=black}
-\setbeamercolor{title in head/foot}{fg=ta2orange, bg=black}
+\setbeamercolor{framesubtitle}{fg=\@framesubfgcolor, bg=\@framesubbgcolor}
+\setbeamercolor{author in head/foot}{fg=\@authorhffgcolor, bg=\@authorhfbgcolor}
+\setbeamercolor{title in head/foot}{fg=@\titlehffgcolor, bg=\@titlehfbgcolor}
 
 \setbeamercolor*{normal text}{fg=tachameleon, bg=ta3gray}
 \setbeamercolor*{block body}{bg=ta3aluminium,fg=black}
@@ -52,6 +107,8 @@
   \setbeamertemplate{block end}{
   \end{beamercolorbox}
 }
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % logo path

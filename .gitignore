@@ -1,4 +1,10 @@
 *.nav
 *.out
-*.syntex.gz
+*.synctex.gz
 *.snm
+*.aux
+*.out
+*.log
+*.toc
+*.fdb_latexmk
+*.fls
