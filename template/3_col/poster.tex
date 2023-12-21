@@ -21,6 +21,8 @@
 \usepackage{lmodern}
 
 \usepackage{commands}
+\usepackage{tcolorbox}
+
 
 % \usepackage{snapshot} % will write a .dep file with all dependencies, allows for easy bundling
 
@@ -227,6 +229,7 @@
                 \item upright descriptor versions reduce the number of false matches
                 \end{itemize}
               \end{itemize}
+              \insertblocktitle
             \end{block}
           }
         \end{minipage}
@@ -246,7 +249,7 @@
             % fill each column with content            
             \begin{block}{}
               \begin{itemize}
-              \item Most face recognition approaches are sensitive to registration errors
+              \item Most"\insertblocktitle"face recognition approaches are sensitive to registration errors
                 \begin{itemize}
                 \item rely on a very good initial alignment and illumination
                 \end{itemize}

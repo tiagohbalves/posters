@@ -2,6 +2,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \RequirePackage{tangocolors}
+\RequirePackage{tcolorbox}
 \selectcolormodel{cmyk}
 \mode<presentation>
 
@@ -100,9 +101,8 @@
 \setbeamerfont{block title}{size=\large,series=\bf}
 \setbeamercolor{upper separation line head}{fg=\@upperseparationcolor}
 
-\setbeamercolor*{example body}{fg=\@blockfgcolor,bg=\@blockbgcolor}
-\setbeamercolor*{example text}{fg=\@normaltxtfgcolor,bg=\@normaltxtbgcolor}
-\setbeamercolor*{example title}{bg=\@blocktitlebgcolor,fg=\@blocktitlefgcolor}
+\setbeamercolor*{block body example}{fg=\@blockfgcolor,bg=\@blockbgcolor}
+\setbeamercolor*{block text example}{fg=\@normaltxtfgcolor,bg=\@normaltxtbgcolor}
 %\setbeamercolor{alerted text}{fg=ta3gray}
 
 %\setbeamercolor{example text}{fg=taorange}
@@ -112,19 +112,17 @@
 \setbeamertemplate{navigation symbols}{}  % no navigation on a poster
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setbeamertemplate{block begin}{
-  \vskip.75ex
-  \begin{beamercolorbox}[ht=3.5ex,dp=0.5ex,center,leftskip=-1em,colsep*=.75ex]{block title}%
-    \usebeamerfont*{block title}%
-    {\phantom{Gg}\insertblocktitle}% phantom because of baseline problem
-  \end{beamercolorbox}%
-  {\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
-  \usebeamerfont{block body}%
-  \begin{beamercolorbox}[leftskip=1em,colsep*=.75ex,sep=0.5ex,vmode]{block body}%
-    \ifbeamercolorempty[bg]{block body}{\vskip-.25ex}{\vskip-.75ex}\vbox{}%
-  }
-  \setbeamertemplate{block end}{
-  \end{beamercolorbox}
+
+\useinnertheme[showtitle=false]{tcolorbox}
+
+
+\tcbset{
+  minipage boxed title,
+  attach boxed title to top center={yshift=-1mm},
+  after title app=\strut\strut,
+  fonttitle=\bfseries\sffamily\scriptsize,
+  enhanced,
+  bottom=10mm,
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
