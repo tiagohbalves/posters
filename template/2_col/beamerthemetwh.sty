@@ -57,8 +57,28 @@
 \def\@titlehfbgcolor{black}
 \newcommand{\settitlehfbgcolor}[1]{\def\@titlehfbgcolor{#1}}
 
+% Block colors
 
+\def\@normaltxtfgcolor{tachameleon}
+\newcommand{\setnormaltxtfgcolor}[1]{\def\@normaltxtfgcolor{#1}}
 
+\def\@normaltxtbgcolor{ta3gray}
+\newcommand{\setnormaltxtbgcolor}[1]{\def\@normaltxtbgcolor{#1}}
+
+\def\@blockfgcolor{black}
+\newcommand{\setblockfgcolor}[1]{\def\@blockfgcolor{#1}}
+
+\def\@blockbgcolor{ta3aluminium}
+\newcommand{\setblockbgcolor}[1]{\def\@blockbgcolor{#1}}
+
+\def\@blocktitlefgcolor{taorange}
+\newcommand{\setblocktitlefgcolor}[1]{\def\@blocktitlefgcolor{#1}}
+
+\def\@blocktitlebgcolor{ta2gray}
+\newcommand{\setblocktitlebgcolor}[1]{\def\@blocktitlebgcolor{#1}}
+
+\def\@upperseparationcolor{ta2orange}
+\newcommand{\setupperseparationcolor}[1]{\def\@upperseparationcolor{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -74,15 +94,11 @@
 \setbeamercolor{author in head/foot}{fg=\@authorhffgcolor, bg=\@authorhfbgcolor}
 \setbeamercolor{title in head/foot}{fg=@\titlehffgcolor, bg=\@titlehfbgcolor}
 
-\setbeamercolor*{normal text}{fg=tachameleon, bg=ta3gray}
-\setbeamercolor*{block body}{bg=ta3aluminium,fg=black}
-\setbeamercolor*{block title}{fg=taorange,bg=ta2gray}
+\setbeamercolor*{normal text}{fg=\@normaltxtfgcolor, bg=\@normaltxtbgcolor}
+\setbeamercolor*{block body}{bg=\@blockbgcolor,fg=\@blockfgcolor}
+\setbeamercolor*{block title}{fg=\@blocktitlefgcolor,bg=\@blocktitlebgcolor}
 \setbeamerfont{block title}{size=\large,series=\bf}
-\setbeamercolor{upper separation line head}{fg=ta2orange}
-
-\setbeamercolor*{example body}{fg=ta3aluminium,bg=black}
-\setbeamercolor*{example text}{fg=ta3aluminium,bg=black}
-\setbeamercolor*{example title}{bg=taorange,fg=ta2gray}
+\setbeamercolor{upper separation line head}{fg=\@upperseparationcolor}
 
 %\setbeamercolor{alerted text}{fg=ta3gray}
 
